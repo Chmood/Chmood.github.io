@@ -60,8 +60,9 @@ _Les sites dont j'ai conçu le front-end, intégrés en masse par d'autres que m
 _Les outils open-source que j'ai créés_
 
 * Quasu : starter app pour VueJS / Quasar Framework [BIENTÔT]
-* [Lightwords](https://github.com/webcd/lightwords) : starter theme WordPress
-* [Batstroop](https://github.com/webcd/batstroop) : framework front-end
+* [Lightwords](https://github.com/webcd/lightwords) : starter theme WordPress. Basé sur Timber (templates Twig maison).
+* [Batstroop](https://github.com/webcd/batstroop) : framework front-end, en remplacement de Bootstrap (Flexbox, Gulp)
+* [Aramid](http://chmood.github.io/aramid/src/) : framework front-end (grille responsive, typographie) [PERSO]
 
 ### Applications web
 
@@ -72,3 +73,11 @@ _Les applis web que j'ai développées_
 * Dashboard de résultats de sondage interne ([prototype Codepen](http://codepen.io/Chmood/full/RWQgrp/)) [PRIVÉ]
 * Appli mobile des commerciaux Plus que PRO (avec Appccelerator) [PRIVÉ]
 * [Calculateur de liquide pour e-cigarette](http://makemyjuice.fr/) [OLD] [PERSO]
+
+### Jeux
+
+_Quel dev n'aime pas coder ça ? (voir mon [github](https://github.com/Chmood) pour les sources)_
+
+* [Rot-like](https://github.com/Chmood/rotlike), un rogue-like avec [rot.js](http://ondras.github.io/rot.js/hp/)
+* [SHMUP](http://chmood.github.io/shmup/dist/), un shoot-em-up avec [Impact](http://impactjs.com/)
+* [Un jeu de course 3D](http://chmood.github.io/cannon-racer/src/) avec [ThreeJS](https://threejs.org/) et [Cannon.js](http://www.cannonjs.org/)
