@@ -59,7 +59,7 @@ _Les sites dont j'ai conçu le front-end, intégrés en masse par d'autres que m
 
 _Les outils open-source que j'ai créés_
 
-* Quasu : starter app pour VueJS / Quasar Framework [BIENTÔT]
+* [Quasu](https://github.com/Chmood/quasu) : starter app pour VueJS / Quasar Framework
 * [Lightwords](https://github.com/webcd/lightwords) : starter theme WordPress. Basé sur Timber (templates Twig maison).
 * [Batstroop](https://github.com/webcd/batstroop) : framework front-end, en remplacement de Bootstrap (Flexbox, Gulp)
 * [Aramid](http://chmood.github.io/aramid/src/) : framework front-end (grille responsive, typographie) [PERSO]
