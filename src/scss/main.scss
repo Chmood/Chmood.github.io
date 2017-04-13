@@ -2,16 +2,19 @@
  *
  * MAIN SCSS FILE
  *
- ----------------------------------------------------------------------------*/
+ ******************************************************************************/
 
- /* CSS RESET */
- @import "reset";
+@import "reset";
 
- /* VENDOR LIBS */
-// @import "bootstrap";
+@import "variables";
 
-/* LIBS */
-//@import "foo";
+@import "mixins";
+@import "base";
+@import "grid";
+@import "layout";
 
-/* APP */
-@import "app";
+@import "user";
+@import "timeline";
+@import "sections";
+
+@import "print";

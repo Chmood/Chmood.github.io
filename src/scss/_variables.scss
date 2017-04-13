@@ -1,0 +1,77 @@
+////////////////////////////////////////////////////////////////////////////////
+// CONFIGURATION
+
+// Layout
+
+$breakpoint:                25cm;	// printed A4
+$breakpoints: (
+                            // 'sm':  767px,
+                            // 'md':  992px,
+                            'lg':  25cm
+) !default;
+
+$aside-width:               29% !default; // Width of the left column
+
+
+// Palette colors
+
+$color-primary:             #EE5722 !default;
+$color-secondary:           #2d3e4e !default;
+
+$color-gray-darker:         #222 !default;
+$color-gray-dark:           #444 !default;
+$color-gray:                #888 !default;
+$color-gray-light:          #aaa !default;
+$color-gray-lighter:        #eee !default;
+
+// Type
+
+$pixels-per-rem:            10 !default; // Kind of global zoom
+
+$fontsize-base:             1.4rem !default;
+$fontsize-base-print:       1.2rem !default;
+
+$lineheight-base:           1.5 !default;
+
+$fontsize-big: 	            1.6rem !default;
+$fontsize-bigger:           2.0rem !default;
+$fontsize-small:            1.4rem !default;
+$fontsize-smaller:          1.2rem !default;
+
+$fontsize-h1:  			        5.0rem !default;
+$fontsize-h2:  			        3.6rem !default;
+$fontsize-h3:  			        $fontsize-bigger !default; // 20px
+
+$fontfamily-base:           'Roboto' !default;
+$fontfamily-alt:            'InCaseOf' !default;
+
+
+////////////////////////////////////////////////////////////////////////////////
+// COMPUTED
+// /!\ Don't edit below unless you know the game! /!\
+
+// Gutter
+
+$gutter:                    $fontsize-base * $lineheight-base;
+$gutter-in-px:              round($gutter * $pixels-per-rem / 1rem);
+
+$gutter-half:		            $gutter / 2;
+$gutter-quarter:	          $gutter / 4;
+$gutter-double:		          $gutter * 2;
+$gutter-quad:		            $gutter * 4;
+
+// Palette
+
+$color-primary-darkest:     mix($color-primary, black, 33.33%);
+$color-primary-darker:      mix($color-primary, black, 50%);
+$color-primary-dark:        mix($color-primary, black, 66.67%);
+$color-primary-light:       mix($color-primary, white, 66.67%);
+$color-primary-lighter:     mix($color-primary, white, 50%);
+$color-primary-lightest:    mix($color-primary, white, 33.33%);
+
+$color-secondary-darkest:   mix($color-secondary, black, 33.33%);
+$color-secondary-darker:    mix($color-secondary, black, 50%);
+$color-secondary-dark:      mix($color-secondary, black, 66.67%);
+$color-secondary-light:     mix($color-secondary, white, 66.67%);
+$color-secondary-lighter:   mix($color-secondary, white, 50%);
+$color-secondary-lightest:  mix($color-secondary, white, 33.33%);

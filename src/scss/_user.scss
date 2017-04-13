@@ -1,0 +1,247 @@
+// USER
+
+.user__name {
+  position: absolute;
+  top: 0;
+  transform: translate3d(0, -50%, 0);
+  margin: 0;
+  padding: $gutter-quarter $gutter-half;
+  padding-right: $gutter-double;
+  text-align: left;
+  color: white;
+
+  .name__last-name {
+    display: inline-block;
+    margin-left: - $gutter-quarter * 1.3;  // Fine-tuning
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: $color-secondary;
+    transform: skewX(-10deg);  // Font italic angle
+    @include m-shadow(2);
+  }
+
+  @include bp('lg') {
+    font-size: 4rem;
+	}
+}
+
+.user__job {
+  margin-bottom: 0;
+  margin-top: 3rem;
+  font-weight: 300;
+  line-height: 1;
+
+  @include bp('lg') {
+    font-size: 3rem;
+	}
+}
+
+
+.user__media {}
+
+.user__media--hero {
+  $dot-size: $gutter-quad;
+
+  position: relative;
+
+  .media {
+    max-height: 40rem;
+    overflow: hidden;
+  }
+
+  @include bp('lg') {
+
+    .media {
+      position: relative;
+      height: 0;
+      padding-bottom: 141.42%;
+      max-height: none;
+      background-color: white;
+    }
+
+    .media__wrapper {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      overflow: hidden;
+      background-color: $color-secondary;
+    }
+
+    .media__image {
+      position: absolute;
+      top: -10%;
+      right: -50%;
+      max-width: none;
+      max-width: 336%;
+    }
+  }
+}
+
+.user__media--round {
+
+  $media-size: 28rem;
+
+  display: inline-block;
+  width: 100%;
+  max-width: $media-size;
+  padding: $gutter;
+  margin: $gutter 0;
+
+  .media {
+    position: relative;
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 0 $gutter lighten($color-primary, 15%);
+  }
+
+  .media__wrapper {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    background: $color-secondary;
+    z-index: +1;
+  }
+
+  .media__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: none;
+    max-width: 160%;
+  }
+}
+
+
+.section.user-title {
+  position: relative;
+  padding-top: $gutter-double;
+  padding-bottom: $gutter-double;
+}
+
+.user__metas {
+  flex: 1;
+  background-color: white;
+  color: $color-primary;
+
+  h3 {
+    font-size: 1.8rem;
+    padding: $gutter-quarter;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  > article {
+    margin-bottom: $gutter;
+  }
+}
+
+.socials,
+.contact {
+
+  > * {
+    display: block;
+    min-height: 2.4rem;
+    margin-bottom: $gutter-half;
+  }
+}
+
+.status {
+  margin-top: $gutter;
+  color: $color-secondary;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.status__age {}
+.status__city {}
+.status__job {}
+
+.socials {
+  margin-bottom: $gutter-half;
+}
+
+.social {
+  border: none;
+  $social-icon-size: 6rem;
+
+  position: relative;
+  min-height: $social-icon-size;
+  margin-bottom: $gutter;
+
+  display: block;
+
+  &:hover {
+  }
+
+  .social__icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d( -50%, -60%, 0);
+    width: $social-icon-size;
+    height: $social-icon-size;
+    font-size: $social-icon-size;
+    line-height: 1;
+    text-align: center;
+    font-family: "FontAwesome";
+
+    fill: $color-secondary;
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d( -50%, -50%, 0);
+    padding: $gutter-quarter / 2 $gutter-half;
+    background-color: white;
+    line-height: 1;
+    font-style: italic;
+    color: white;
+
+    &:before { // skewed bg
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: skewX(-10deg);
+      background-color: $color-secondary;
+      z-index: -1;
+    }
+  }
+}
+
+.contact__phone {
+  font-size: $fontsize-big;
+  font-style: italic;
+}
+
+.adress {
+  margin-top: $gutter-half;
+  font-style: italic;
+  color: $color-gray;
+}
+
+.adress__country {
+  text-transform: uppercase;
+}

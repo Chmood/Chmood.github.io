@@ -1,0 +1,86 @@
+// BOX MODEL
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+// MAIN STYLES
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,100');
+// @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+
+html, body {
+  min-height: 100vh; // Full height viewport
+}
+
+html {
+  font-size: $pixels-per-rem * 1px; // Default: 10px
+}
+
+body {
+  background-color: $color-gray-dark;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.6rem;
+	line-height: $lineheight-base;
+  -webkit-font-smoothing: antialiased;
+
+	@media (min-width: $breakpoint) {
+		padding: $gutter-double 0;
+    font-size: $fontsize-base;
+	}
+}
+
+a {
+  $link-color--hover: lighten($color-secondary, 20%);
+
+  color: $color-secondary;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px dotted transparent;
+  transition: all 0.25s;
+
+  &:hover {
+    color: $link-color--hover;
+    border-color: $link-color--hover;
+  }
+}
+
+
+h1 {
+  font-size: $fontsize-h1;
+  line-height: 0.9;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: $fontsize-h2;
+  line-height: 1.25;
+
+  font-weight: normal;
+}
+
+h3 {
+  font-size: $fontsize-h3;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $color-gray;
+  margin-top: $gutter * 1.25;
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: $gutter-half;
+  list-style-type: none;
+}
