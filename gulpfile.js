@@ -206,23 +206,22 @@ gulp.task('styles', function() {
 	.on('error', plugins.util.log);
 });
 
-gulp.task('styleguide', function(){
-
-	//	return gulp.src([config.path.src + config.path.scss + '_foo.scss'])
-	return gulp.src([config.pathCssTmp + 'main.css'])
-	.pipe(plugins.postcss([
-		styleguide({
-			name: "Project name",
-			dir: config.pathStyleguide,
-			file: "index.html",
-			// showCode: true,
-			processedCSS: fs.readFileSync(config.pathCssTmp + 'main.css', 'utf-8'),
-			// theme: "sassline"	// TODO BUG : themes not working
-		})
-	]))
-	.pipe(reload({stream: true}))
-	.on('error', plugins.util.log);
-});
+// gulp.task('styleguide', function(){
+//
+// 	return gulp.src([config.pathCssTmp + 'main.css'])
+// 	.pipe(plugins.postcss([
+// 		styleguide({
+// 			name: "Project name",
+// 			dir: config.pathStyleguide,
+// 			file: "index.html",
+// 			// showCode: true,
+// 			processedCSS: fs.readFileSync(config.pathCssTmp + 'main.css', 'utf-8'),
+// 			// theme: "sassline"	// TODO BUG : themes not working
+// 		})
+// 	]))
+// 	.pipe(reload({stream: true}))
+// 	.on('error', plugins.util.log);
+// });
 
 
 // SCRIPTS
@@ -258,7 +257,7 @@ gulp.task('serve', function() {
 			baseDir: ['./'],
 			routes: {
 				"/dev": './' + config.path.src,
-				"/styleguide": './' + config.pathStyleguide,
+				// "/styleguide": './' + config.pathStyleguide,
 				"/prod": './' + config.path.dist,
 			},
 			port: config.serverport
@@ -276,7 +275,7 @@ gulp.task('serve', function() {
 gulp.task('watch', function () {
 	gulp.watch(config.pathEs, ['scripts']);
 	gulp.watch(config.pathScss, ['styles']);
-	gulp.watch(config.pathCssTmp + "main.css", ['styleguide']);
+	// gulp.watch(config.pathCssTmp + "main.css", ['styleguide']);
 	gulp.watch(config.pathHtml, ['markup']);
 	gulp.watch(config.pathImages, ['images']);
 	gulp.watch(config.pathSpritesSVG, ['sprites-reload']);
@@ -288,7 +287,8 @@ gulp.task('watch', function () {
 
 // gulp.task('style-n-guide', function() { runSequence('styles','styleguide');});
 gulp.task('style-n-guide', ['styles']);
-gulp.task('compile', ['scripts', 'style-n-guide', 'markup']);
+// gulp.task('compile', ['scripts', 'style-n-guide', 'markup']);
+gulp.task('compile', ['scripts', 'markup']);
 gulp.task('graphics', ['images', 'sprites']);
 gulp.task('swatch', ['serve', 'watch']);
 
