@@ -2,12 +2,14 @@
 
 .user__name {
   position: absolute;
+  display: inline-block;
   top: 0;
-  transform: translate3d(0, -50%, 0);
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
   margin: 0;
-  padding: $gutter-quarter $gutter-half;
-  padding-right: $gutter-double;
-  text-align: left;
+  padding: $gutter-half $gutter-double;
+  // padding-right: $gutter-double;
+  text-align: center;
   color: white;
 
   .name__last-name {
@@ -29,6 +31,10 @@
   }
 
   @include bp('lg') {
+    display: block;
+    left: auto;
+    transform: translate3d(0%, -50%, 0);
+    padding: $gutter-half $gutter;
     font-size: 4rem;
 	}
 }
