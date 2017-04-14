@@ -87,6 +87,10 @@
   article {
     margin-bottom: $gutter;
 
+    @include bp('lg') {
+      margin-bottom: $gutter-half;
+    }
+
     .section--tasks & {
       margin-bottom: $gutter-half;
     }
