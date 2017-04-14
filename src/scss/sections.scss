@@ -37,8 +37,14 @@
 
 .section {
   position: relative;
-  padding: $gutter * 1.5 $gutter;
-  padding-top: $gutter * 1.5;
+  padding: $gutter-and-half $gutter;
+
+  &:first-child {
+    padding-top: $gutter; // No title for the first section
+  }
+  &:last-child {
+    padding-bottom: $gutter; // No title in next section
+  }
 }
 
 /* Section - title */
@@ -79,7 +85,11 @@
 .section__body {
 
   article {
-    margin-bottom: $gutter-half;
+    margin-bottom: $gutter;
+
+    .section--tasks & {
+      margin-bottom: $gutter-half;
+    }
   }
 
   h3 {
