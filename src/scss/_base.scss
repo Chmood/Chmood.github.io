@@ -15,7 +15,6 @@ html {
 }
 
 body {
-  background-color: $color-gray-dark;
 	font-family: $fontfamily-base;
 	font-size: $fontsize-base;
 	line-height: $lineheight-base;
@@ -23,8 +22,12 @@ body {
   -webkit-font-smoothing: antialiased; // Does it help?
 
 	@include bp ('lg') {
-		padding: $gutter-double 0;
-    font-size: $fontsize-base;
+    background-color: $color-gray-dark;
+    background-image: radial-gradient(ellipse farthest-corner, #888, #222);
+    // Supaflex centered cv :)
+    display: flex;
+    align-items: center;
+    justify-content: center;
 	}
 }
 
