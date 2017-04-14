@@ -9,8 +9,10 @@ $breakpoints: (
                             'lg': 60em // 960px
 ) !default;
 
-$cv-width:                  57em;
+$cv-width:                  57em; // Desktop document width
 $aside-width:               29% !default; // Width of the left column
+
+$skew-angle:                -7deg !default; // Skew elements use this angle
 
 // Palette colors
 

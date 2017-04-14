@@ -26,7 +26,7 @@
     right: 0;
     z-index: -1;
     background-color: $color-secondary;
-    transform: skewX(-10deg);  // Font italic angle
+    transform: skewX($skew-angle);  // Font italic angle
     @include m-shadow(2);
   }
 
@@ -235,7 +235,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      transform: skewX(-10deg);
+      transform: skewX($skew-angle);
       background-color: $color-secondary;
       z-index: -1;
     }
