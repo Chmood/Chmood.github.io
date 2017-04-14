@@ -39,8 +39,8 @@
   position: relative;
   padding: $gutter-and-half $gutter;
 
-  &:first-child { padding-top: $gutter; // No title for the first section }
-  &:last-child { padding-bottom: $gutter; // No title in next section }
+  &:first-child { padding-top: $gutter; } // No title for the first section
+  &:last-child { padding-bottom: $gutter; } // No title in next section
   &.user__social { padding-bottom: $gutter; }
   &.user__contact { padding-top: 0; }
 }
