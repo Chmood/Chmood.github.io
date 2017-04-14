@@ -35,7 +35,7 @@
     left: auto;
     transform: translate3d(0%, -50%, 0);
     padding: $gutter-half $gutter;
-    font-size: 4rem;
+    font-size: $fontsize-giant;
 	}
 }
 
@@ -47,7 +47,7 @@
 
   @include bp('lg') {
     margin-top: $gutter;
-    font-size: 3rem;
+    font-size: $fontsize-huge;
 	}
 }
 
@@ -144,7 +144,7 @@
   color: $color-primary;
 
   h3 {
-    font-size: 1.8rem;
+    font-size: $fontsize-big;
     padding: $gutter-quarter;
 
     &:first-child {

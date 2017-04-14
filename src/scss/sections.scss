@@ -26,9 +26,9 @@
 }
 
 %big-strong {
-  font-weight: $fontweight-bold;
-  font-size: 1.15em;
+  font-size: $fontsize-big;
   line-height: 1;
+  font-weight: $fontweight-bold;
 }
 
 
@@ -38,13 +38,6 @@
   position: relative;
   padding: $gutter * 1.5 $gutter;
   padding-top: $gutter * 1.5;
-
-  &:first-child {
-    padding-top: $gutter * 1.5;
-  }
-  &:last-child {
-    padding-bottom: $gutter-half;
-  }
 }
 
 /* Section - title */
@@ -61,7 +54,7 @@
   margin: 0;
   text-align: center;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: $fontsize-bigger;
   font-weight: $fontweight-light;
   font-style: italic;
 
