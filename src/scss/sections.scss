@@ -6,7 +6,8 @@
 %trailing-slashes {
 
   &:after {
-    content: " // ";
+    content: " //";
+    margin-right: $gutter-quarter;
   }
 }
 
