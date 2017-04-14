@@ -43,7 +43,7 @@ $fontsize-h3:  			        $fontsize-bigger !default; // 20px
 
 // $fontweight-hair:           100 !default;
 $fontweight-light:          300 !default; // normal & italic
-$fontweight-base:           400 !default; // normal (body default)
+$fontweight-base:           400 !default; // normal (body default) & italic
 // $fontweight-semibold:       500 !default;
 $fontweight-bold:           700 !default; // italic
 // $fontweight-book:           900 !default;
@@ -54,7 +54,7 @@ $fontfamily-alt:            'InCaseOf' !default;
 
 // CDN fonts
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700i');
 // @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,700i');
 
 // @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
