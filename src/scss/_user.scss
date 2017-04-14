@@ -41,11 +41,12 @@
 
 .user__job {
   margin-bottom: 0;
-  margin-top: 3rem;
+  margin-top: $gutter-double;
   font-weight: $fontweight-light;
   line-height: 1;
 
   @include bp('lg') {
+    margin-top: $gutter;
     font-size: 3rem;
 	}
 }
@@ -166,6 +167,8 @@
   }
 }
 
+// STATUS
+
 .status {
   margin-top: $gutter;
   color: $color-secondary;
@@ -178,6 +181,8 @@
 .status__city {}
 .status__job {}
 
+// SOCIAL
+
 .socials {
   margin-bottom: $gutter-half;
 }
@@ -188,7 +193,7 @@
 
   position: relative;
   min-height: $social-icon-size;
-  margin-bottom: $gutter;
+  margin-bottom: $gutter-half;
 
   display: block;
 
@@ -236,6 +241,8 @@
     }
   }
 }
+
+// CONTACT
 
 .contact__phone {
   font-size: $fontsize-big;

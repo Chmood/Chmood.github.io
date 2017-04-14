@@ -37,7 +37,7 @@
 .section {
   position: relative;
   padding: $gutter * 1.5 $gutter;
-  padding-top: $gutter-double;
+  padding-top: $gutter * 1.5;
 
   &:first-child {
     padding-top: $gutter * 1.5;

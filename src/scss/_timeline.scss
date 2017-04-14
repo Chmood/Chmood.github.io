@@ -79,17 +79,20 @@
   }
 
   .date-range {
+    color: tomato;
     display: block;
+    margin-bottom: $gutter-quarter;
     font-weight: $fontweight-bold;
     font-style: italic;
     letter-spacing: -0.2rem;
-    font-size: $timeline-dot-size;
     line-height: 1;
     color: $color-secondary-lighter;
-    margin-top: - ($timeline-dot-size - $timeline-item-size);  // vert center
 
     @include bp('lg') {
+      margin-bottom: 0;
+      // padding: $gutter-quarter;
       float: right;
+      margin-top: - ($timeline-dot-size - $timeline-item-size);  // vert center
     }
   }
 
