@@ -4,13 +4,13 @@
 // Layout
 
 $breakpoints: (
-                            // 'sm':  767px,
-                            // 'md':  992px,
-                            'lg':  50em
+                            // 'sm': 30em, // 480px
+                            // 'md': 45em, // 720px,
+                            'lg': 60em // 960px
 ) !default;
 
+$cv-width:                  57em;
 $aside-width:               29% !default; // Width of the left column
-
 
 // Palette colors
 
@@ -51,7 +51,7 @@ $fontweight-bold:           900 !default; // italic
 $fontfamily-base:           'Roboto' !default;
 // $fontfamily-base:           'Raleway'; // Wider than Roboto
 // $fontfamily-base:           'Montserrat'; // A bit bolder, but too wide
-$fontfamily-base:           'Lato'; //
+$fontfamily-base:           'Lato'; // Very compact, could fit with a 900 bold
 
 $fontfamily-alt:            'InCaseOf' !default;
 

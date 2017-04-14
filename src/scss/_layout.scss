@@ -9,7 +9,8 @@
 
   }
   @include bp('lg') {
-    width: 21cm;
+    width: 57em;
+    // width: 21cm; // A4 force format
 		// min-height: 29.7cm; // A4 force format
     overflow: hidden;
     flex-direction: row;
