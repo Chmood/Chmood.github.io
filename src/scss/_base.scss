@@ -22,7 +22,7 @@ body {
 
   -webkit-font-smoothing: antialiased; // Does it help?
 
-	@media (min-width: $breakpoint) {
+	@include bp ('lg') {
 		padding: $gutter-double 0;
     font-size: $fontsize-base;
 	}
