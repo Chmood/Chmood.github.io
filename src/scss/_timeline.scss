@@ -79,7 +79,7 @@
 
   .date-range {
     display: block;
-    font-weight: 700;
+    font-weight: $fontweight-bold;
     font-style: italic;
     letter-spacing: -0.2rem;
     font-size: $timeline-dot-size;

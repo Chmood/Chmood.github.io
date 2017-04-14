@@ -6,9 +6,6 @@
 
 // MAIN STYLES
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,100');
-// @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
-
 html, body {
   min-height: 100vh; // Full height viewport
 }
@@ -19,10 +16,11 @@ html {
 
 body {
   background-color: $color-gray-dark;
-	font-family: 'Roboto', sans-serif;
-	font-size: 1.6rem;
+	font-family: $fontfamily-base;
+	font-size: $fontsize-base;
 	line-height: $lineheight-base;
-  -webkit-font-smoothing: antialiased;
+
+  -webkit-font-smoothing: antialiased; // Does it help?
 
 	@media (min-width: $breakpoint) {
 		padding: $gutter-double 0;
@@ -34,7 +32,8 @@ a {
   $link-color--hover: lighten($color-secondary, 20%);
 
   color: $color-secondary;
-  font-weight: 700;
+  font-weight: $fontweight-bold;
+  font-style: italic;
   text-decoration: none;
   border-bottom: 2px dotted transparent;
   transition: all 0.25s;
@@ -49,7 +48,7 @@ a {
 h1 {
   font-size: $fontsize-h1;
   line-height: 0.9;
-  font-weight: 100;
+  font-weight: $fontweight-light;
   text-transform: uppercase;
   font-style: italic;
 }
@@ -57,14 +56,13 @@ h1 {
 h2 {
   font-size: $fontsize-h2;
   line-height: 1.25;
-
-  font-weight: normal;
+  font-weight: $fontweight-base;
 }
 
 h3 {
   font-size: $fontsize-h3;
   line-height: 1.25;
-  font-weight: 400;
+  font-weight: $fontweight-base;
   text-transform: uppercase;
   color: $color-gray;
   margin-top: $gutter * 1.25;

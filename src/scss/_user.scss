@@ -36,7 +36,7 @@
 .user__job {
   margin-bottom: 0;
   margin-top: 3rem;
-  font-weight: 300;
+  font-weight: $fontweight-light;
   line-height: 1;
 
   @include bp('lg') {
