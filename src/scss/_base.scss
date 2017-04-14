@@ -22,12 +22,29 @@ body {
   -webkit-font-smoothing: antialiased; // Does it help?
 
 	@include bp ('lg') {
-    background-color: $color-gray-dark;
-    background-image: radial-gradient(ellipse farthest-corner, #888, #222);
     // Supaflex centered cv :)
     display: flex;
     align-items: center;
     justify-content: center;
+
+    // Vertical padding
+    padding: $gutter-double 0;
+
+    // Background enlightment
+    $bodybg-pattern-size: 0.5em;
+    $bodybg-pattern-intensity: 0.05em;
+
+    background-color: $color-gray-dark;
+    background-image:
+      repeating-linear-gradient(
+        90deg - $skew-angle,
+        transparent,
+        transparent $bodybg-pattern-size,
+        rgba(0,0,0,$bodybg-pattern-intensity) $bodybg-pattern-size,
+        rgba(0,0,0,$bodybg-pattern-intensity) 2 * $bodybg-pattern-size
+      ),
+      radial-gradient(ellipse farthest-corner, $color-secondary-lighter, $color-gray-darkest)
+    ;
 	}
 }
 
