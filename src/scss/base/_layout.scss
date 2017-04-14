@@ -1,18 +1,25 @@
+// LAYOUT
+
 .cv {
   position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   background-color: white;
 
+  @include bp ('md') {
+    width: $cv-width-md;
+    @include m-shadow(3);
+  }
+
   @include bp('lg') {
-    width: $cv-width;
+    width: $cv-width-lg;
     // width: 21cm; // A4 force format
 		// min-height: 29.7cm; // A4 force format
     overflow: hidden;
     flex-direction: row;
     flex-wrap: wrap;
-    @include m-shadow(3);
 	}
 }
 
@@ -35,10 +42,9 @@
   background-color: $color-primary;
   color: white;
   text-align: center;
-  padding: $gutter;
+  padding: $gutter-half;
 
   @include bp('lg') {
-    padding: $gutter-half;
     flex: 0 0 (100% - $aside-width);
     margin-left: $aside-width;
     box-shadow: -7cm 0 0 0 $color-gray-lighter;

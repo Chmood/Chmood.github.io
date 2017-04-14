@@ -1,0 +1,68 @@
+/* Section - body */
+
+// Placeholders
+
+%trailing-slashes {
+
+  &:after {
+    content: " //";
+    margin-right: $gutter-quarter;
+  }
+}
+
+%headline {
+  text-transform: uppercase;
+  font-size: $fontsize-big;
+  font-weight: $fontweight-bold;
+  font-style: italic;
+}
+
+%headline--inline {
+
+  &,
+  & + * {
+    display: inline;
+  }
+}
+
+%big-strong {
+  font-size: $fontsize-big;
+  line-height: 1;
+  font-weight: $fontweight-bold;
+}
+
+
+// Section body
+
+.section__body {
+
+  article {
+    margin-bottom: $gutter;
+
+    @include bp('lg') {
+      margin-bottom: $gutter-half;
+    }
+
+    .section--tasks & {
+      margin-bottom: $gutter-half;
+    }
+  }
+
+  h3 {
+    @extend %headline;
+  }
+
+  .section--tasks &,
+  .section--tools &,
+  .section--profile & {
+
+    h3 {
+      @extend %trailing-slashes;
+      @extend %headline--inline;
+    }
+  }
+
+  p + p {
+    margin-top: $gutter-half;
+  }
+}

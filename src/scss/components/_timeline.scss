@@ -17,13 +17,6 @@
 
 
 .timeline {//background-color: gray;
-  $timeline-item-size: $fontsize-big;
-  $timeline-dot-size: $fontsize-big * 1;
-  $timeline-line-size: $timeline-dot-size / 5;
-
-  $timeline-tips-size: $timeline-dot-size;
-  $timeline-tree-size: $timeline-dot-size * 2;
-
   position: relative;
   padding-top: $gutter;
   margin-left: 0;

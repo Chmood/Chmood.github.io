@@ -3,6 +3,7 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
 
   > * {
     flex-grow: 1;
@@ -12,7 +13,7 @@
 
   &.grid--50 > * {
 
-    @include bp('lg') {
+    @include bp('sm') {
 
       flex-basis: 50%;
 

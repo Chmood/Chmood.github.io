@@ -4,12 +4,13 @@
 // Layout
 
 $breakpoints: (
-                            // 'sm': 30em, // 480px
-                            // 'md': 45em, // 720px,
+                            'sm': 30em, // 480px
+                            'md': 45em, // 720px,
                             'lg': 60em // 960px
 ) !default;
 
-$cv-width:                  54em; // Desktop document width
+$cv-width-md:               40em; // Tablet document width
+$cv-width-lg:               54em; // Desktop document width
 $aside-width:               29% !default; // Width of the left column
 
 $skew-angle:                -7deg !default; // Skew elements use this angle
@@ -41,10 +42,11 @@ $fontsize-big: 	            1.8rem !default;
 $fontsize-bigger:           2.0rem !default;
 $fontsize-biggest:          2.4rem !default;
 $fontsize-huge:             3.0rem !default;
+$fontsize-huger:            3.6rem !default;
 $fontsize-giant:            4.0rem !default;
 
-$fontsize-h1:  			        5.0rem !default;
-$fontsize-h2:  			        3.6rem !default;
+$fontsize-h1:  			        $fontsize-giant !default;
+$fontsize-h2:  			        $fontsize-huger !default;
 $fontsize-h3:  			        $fontsize-bigger !default; // 20px
 
 // $fontweight-hair:           100 !default;
@@ -70,6 +72,15 @@ $fontfamily-alt:            'InCaseOf' !default;
 @import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,900i');
 
 // @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+
+// Timeline
+
+$timeline-item-size: $fontsize-big;
+$timeline-dot-size: $fontsize-big * 1;
+$timeline-line-size: $timeline-dot-size / 5;
+
+$timeline-tips-size: $timeline-dot-size;
+$timeline-tree-size: $timeline-dot-size * 2;
 
 
 ////////////////////////////////////////////////////////////////////////////////

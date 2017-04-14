@@ -21,7 +21,7 @@ body {
 
   -webkit-font-smoothing: antialiased; // Does it help?
 
-	@include bp ('lg') {
+  @include bp ('md') {
     // Supaflex centered cv :)
     display: flex;
     align-items: center;
@@ -36,17 +36,22 @@ body {
 
     background-color: $color-gray-dark;
     background-image:
-      repeating-linear-gradient(
-        90deg - $skew-angle,
-        transparent,
-        transparent $bodybg-pattern-size,
-        rgba(0,0,0,$bodybg-pattern-intensity) $bodybg-pattern-size,
-        rgba(0,0,0,$bodybg-pattern-intensity) 2 * $bodybg-pattern-size
-      ),
-      radial-gradient(ellipse farthest-corner, $color-secondary-lighter, $color-gray-darkest)
+    repeating-linear-gradient(
+    90deg - $skew-angle,
+    transparent,
+    transparent $bodybg-pattern-size,
+    rgba(0,0,0,$bodybg-pattern-intensity) $bodybg-pattern-size,
+    rgba(0,0,0,$bodybg-pattern-intensity) 2 * $bodybg-pattern-size
+    ),
+    radial-gradient(ellipse farthest-corner, $color-secondary-lighter, $color-gray-darkest)
     ;
+  }
+
+	@include bp ('lg') {
 	}
 }
+
+// Links
 
 a {
   $link-color--hover: lighten($color-secondary, 20%);
@@ -64,6 +69,7 @@ a {
   }
 }
 
+// Headings
 
 h1 {
   font-size: $fontsize-h1;
@@ -88,11 +94,14 @@ h3 {
   margin-top: $gutter * 1.25;
 }
 
+// Images
 
 img {
   display: block;
   max-width: 100%;
 }
+
+// List
 
 ul {
   padding-left: 0;
