@@ -1,8 +1,8 @@
 /*global global, config, require */
 
-////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // GULPFILE.JS
-////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 // TODO
 //
@@ -16,7 +16,7 @@
 // ideas : https://github.com/osscafe/gulp-cheatsheet
 // https://github.com/google/web-starter-kit/blob/master/gulpfile.babel.js
 
-////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // CONFIGURATION
 
 global.config = {
@@ -41,6 +41,7 @@ global.config = {
   openBrowsers: ["google chrome", "firefox"]
 };
 
+////////////////////////////////////////////////////////////////////////////////
 // PATHS
 
 config.pathTmp =        config.path.src + config.path.tmp;
@@ -72,7 +73,7 @@ config.pathClean =      [
 ];
 
 
-////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // MODULES
 
 var gulp =      require("gulp"),
@@ -87,12 +88,12 @@ var gulp =      require("gulp"),
 
 require("gulp-stats")(gulp);
 
-////////////////////////////////////////
-// INTERNAL TASKS
 
-// UTILS
+////////////////////////////////////////////////////////////////////////////////
+// TASKS
 
-// Clean
+////////////////////////////////////////////////////////////////////////////////
+// CLEAN
 
 gulp.task("clean", function () {
   return gulp.src(config.pathClean)
@@ -100,7 +101,8 @@ gulp.task("clean", function () {
   .on("error", plugins.util.log);
 });
 
-// Copy
+////////////////////////////////////////////////////////////////////////////////
+// COPY
 
 gulp.task("copy", ["copy-fonts"]);
 
@@ -113,6 +115,7 @@ gulp.task("copy-fonts", function () {
 });
 
 
+////////////////////////////////////////////////////////////////////////////////
 // IMAGES
 
 gulp.task("images", function() {
@@ -153,6 +156,7 @@ gulp.task("sprites", function() {
 gulp.task("sprites-reload", ["sprites"], reload);
 
 
+////////////////////////////////////////////////////////////////////////////////
 // MARKUP
 
 gulp.task("markup", function() {
@@ -168,6 +172,7 @@ gulp.task("markup", function() {
 });
 
 
+////////////////////////////////////////////////////////////////////////////////
 // STYLES
 
 gulp.task("styles", function() {
@@ -181,7 +186,7 @@ gulp.task("styles", function() {
       browsers: ["last 2 version"]
     })
   ]))
-  // .pipe(plugins.sourcemaps.write({sourceRoot: "."}))
+  .pipe(plugins.sourcemaps.write({sourceRoot: "."}))
   .pipe(gulp.dest(config.pathTmp + config.path.css))
   .pipe(reload({stream: true}))
 
@@ -192,11 +197,11 @@ gulp.task("styles", function() {
   }))
   .pipe(plugins.rename({suffix: ".min"}))
   .pipe(gulp.dest(config.pathCssDest))
-  .pipe(plugins.sourcemaps.write({sourceRoot: "."}))
   .pipe(reload({stream: true}))
   .on("error", plugins.util.log);
 });
 
+////////////////////////////////////////////////////////////////////////////////
 // SCRIPTS
 
 gulp.task("scripts", function() {
@@ -223,12 +228,13 @@ gulp.task("scripts", function() {
 });
 
 
+////////////////////////////////////////////////////////////////////////////////
 // SERVE
 
 gulp.task("serve", function() {
   browserSync({
     server: {
-      baseDir: ["./"],
+      baseDir: ["./" + config.path.src],
       // routes: {
       //   "/dev": "./" + config.path.src,
       //   "/prod": "./" + config.path.dist
@@ -240,6 +246,7 @@ gulp.task("serve", function() {
   });
 });
 
+////////////////////////////////////////////////////////////////////////////////
 // WATCH
 
 gulp.task("watch", function () {
@@ -251,25 +258,14 @@ gulp.task("watch", function () {
 });
 
 
-////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // USER TASKS
 
 gulp.task("compile", ["scripts", "styles", "markup"]);
 gulp.task("graphics", ["images", "sprites"]);
 gulp.task("swatch", ["serve", "watch"]);
 
-gulp.task("build", function() {
-  runSequence(
-    "clean",
-    ["compile", "graphics"]
-  );
-});
-
-gulp.task("swild", function() {
-  runSequence(
-    "build",
-    "swatch"
-  );
-});
+gulp.task("build", function() { runSequence( "clean", ["compile", "graphics"] ); });
+gulp.task("swild", function() { runSequence( "build", "swatch" ); });
 
 gulp.task("default", ["swild"]);
