@@ -93,6 +93,7 @@ $gutter:                    $fontsize-base * $lineheight-base;
 $gutter-in-px:              round($gutter * $pixels-per-rem / 1rem);
 
 $gutter-half:		            $gutter / 2;
+$gutter-third:	            $gutter / 3;
 $gutter-quarter:	          $gutter / 4;
 $gutter-and-half:		        $gutter * 1.5;
 $gutter-double:		          $gutter * 2;

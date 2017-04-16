@@ -82,7 +82,7 @@ h1 {
 h2 {
   font-size: $fontsize-h2;
   line-height: 1.25;
-  font-weight: $fontweight-base;
+  font-weight: $fontweight-light;
 }
 
 h3 {
@@ -91,7 +91,6 @@ h3 {
   font-weight: $fontweight-base;
   text-transform: uppercase;
   color: $color-gray;
-  margin-top: $gutter * 1.25;
 }
 
 // Images
@@ -110,4 +109,14 @@ ul {
 li {
   margin-bottom: $gutter-half;
   list-style-type: none;
+}
+
+// Paragraphs
+
+p {
+  margin-bottom: $gutter;
+}
+
+em {
+  font-style: italic;
 }
