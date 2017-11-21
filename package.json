@@ -43,6 +43,5 @@
     "run-sequence": "^1.1.5",
     "vinyl-paths": "^2.1.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

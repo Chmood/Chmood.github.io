@@ -16,11 +16,11 @@
   @include bp('lg') {
     width: $cv-width-lg;
     // width: 21cm; // A4 force format
-		// min-height: 29.7cm; // A4 force format
+    // min-height: 29.7cm; // A4 force format
     overflow: hidden;
     flex-direction: row;
     flex-wrap: wrap;
-	}
+  }
 }
 
 .cv__head {
@@ -35,7 +35,7 @@
     z-index: 12;
     display: flex;
     flex-direction: column;
-	}
+  }
 }
 
 .cv__foot {
@@ -45,21 +45,21 @@
   padding: $gutter-half;
 
   @include bp('lg') {
-    flex: 0 0 (100% - $aside-width);
+    flex: 0 0 (100.1% - $aside-width);
     margin-left: $aside-width;
     box-shadow: -7cm 0 0 0 $color-gray-lighter;
     z-index: 12;
-	}
+  }
 }
 
 .cv__main {
   background-color: white;
   color: $color-gray-dark;
-	flex: 1;  // sticky footer
+  flex: 1; // sticky footer
 
   @include bp('lg') {
     flex: 1 0 (100% - $aside-width);
-	}
+  }
 
   strong {
     font-weight: $fontweight-bold;
